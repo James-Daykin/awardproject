@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+
+  <meta charset="UTF-8" />
+</head>
+<script type="text/javascript" src="arr.js"></script>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="image1.jpg" class="background" />
+    </header>
+    <my-header></my-header>
+
+    <fieldset class="wh">
+      <img id="bim" class="bim bam" src="imb4a.jpg" />
+      <div class="wh2">Welcome Home</div>
+    </fieldset>
+
+    <my-footer></my-footer>
+  </div>
+</body>
+<script>
+  const bima = document.getElementById("bim");
+  b = 0;
+  var isD = true;
+  const interva = setInterval(function () {
+    if (isD == true) {
+      isD = false;
+      bima.className = "bim2";
+      delay();
+    }
+    b = b + 1;
+
+    console.log(b);
+    console.log(isD);
+  }, 8000);
+  function delay() {
+    if (isD == false) {
+      setTimeout(function () {
+        isD = true;
+        bima.className = "bim";
+        change();
+      }, 3000);
+    }
+  }
+
+  function change() {
+    if (b == 1) {
+      bim.src = "image5a.jpg";
+      console.log("hi");
+    }
+  }
+</script>
