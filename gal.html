@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="test.css" />
+
+  <meta charset="UTF-8" />
+</head>
+<script type="text/javascript" src="arr.js"></script>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="image1.jpg" class="background" />
+    </header>
+    <my-header></my-header>
+    <fieldset class="wh">
+      <div class="wh3">
+        <img
+          id="bim"
+          class="bim bam"
+          src="imb4a.jpg"
+        />
+        
+        <button class="mb2" id="mb2"><</button>
+        <button class="mb3" id="mb3">></button>
+      </div>
+    </fieldset>
+    <my-footer></my-footer</body>
+  </div>
+</body>
+<script>
+   const mb2 = document.getElementById("mb2");
+   const mb3 = document.getElementById("mb3");
+   const bi = document.getElementById("bim");
+   var uy = false;
+   var nb = 1;
+    mb2.onclick = function(){
+        if (nb > 0){
+        bi.classList.add("bam3");
+        uy = true;
+        
+        bi.classList.remove("bam");
+        change2();
+        console.log(nb);
+        delay();
+    }
+}
+    mb3.onclick = function(){
+        bi.classList.add("bam4");
+        uy = true;
+        
+        bi.classList.remove("bam");
+        change();
+        console.log(nb);
+        delay();
+    }
+    function delay() {
+    if (uy == true) {
+      setTimeout(function () {
+        uy = false;
+        
+        bi.classList.remove("bam3");
+        bi.classList.remove("bam4");
+        
+      }, 1000);
+    }
+  }
+  function change() {
+    nb = nb + 1;
+    bi.src = "imb" + nb + "a.jpg";
+  }
+  function change2() {
+    nb = nb - 1;
+    bi.src = "imb" + nb + "a.jpg";
+  }
+    
+    
+</script>
