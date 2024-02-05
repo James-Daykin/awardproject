@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="test.css" />
+
+  <meta charset="UTF-8" />
+</head>
+<script type="text/javascript" src="arr.js"></script>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="image1.jpg" class="background" />
+    </header>
+    <my-header></my-header>
+    <fieldset class="wh">
+      <div class="wh3">
+        <img
+          id="bim"
+          class="bim bam"
+          src="imb4a.jpg"
+        /><div id="dmb"></div>
+        <div id="dm">Welcome Home<p>The Appartments is a new, exciting housing development based in the centre of Leeds.</p></div>
+        <div id="dm2"><p>We look forward to welcoming you in the coming weeks and months.</p></div>
+        <div class="wh2" id="wh2">Welcome Home</div>
+        <button class="mb" id="mb">↓</button>
+      </div>
+    </fieldset>
+    <my-footer></my-footer</body>
+  </div>
+</body>
+<script>
+  const su = document.getElementById("mb");
+  const bima = document.getElementById("bim");
+  const wh = document.getElementById("wh2");
+  const wh2 = document.getElementById("dmb");
+  const wh3 = document.getElementById("dm2");
+  const wh4 = document.getElementById("dm");
+  let u = 0;
+wh2.style.display = "none";
+wh3.style.display = "none";
+wh4.style.display = "none";
+
+  su.onclick = function(){
+    bima.classList.add("bam2");
+    
+    bim.src = "dl.jpg";
+    u = 1;
+    wh.style.display = "none";
+    wh2.style.display = "block";
+    wh3.style.display = "block";
+    wh4.style.display = "block";
+  };
+  bima.classList.remove("bam");
+  b = 0;
+  var isD = true;
+  const interva = setInterval(function () {
+    if (isD == true && u == 0) {
+      isD = false;
+      bima.className = "bim2";
+      delay();
+    }
+    b = b + 1;
+
+    console.log(b);
+    console.log(isD);
+  }, 8000);
+  function delay() {
+    if (isD == false && u == 0) {
+      setTimeout(function () {
+        isD = true;
+        bima.className = "bim";
+        
+        change();
+      }, 3000);
+    }
+  }
+
+  function change() {
+    if (b == 0) {
+      bim.src = "imb4a.jpg";
+      console.log("hi");
+    }
+    if (b == 1) {
+      bim.src = "imb2a.jpg";
+      console.log("hi");
+    }
+    if (b == 2) {
+      bim.src = "imb3a.jpg";
+      console.log("hi");
+    }
+    if (b == 3) {
+      bim.src = "imb6.jpg";
+      console.log("hi");
+    }
+    if (b == 4) {
+      b = 0;
+      console.log("hi");
+    }
+  }
+</script>
