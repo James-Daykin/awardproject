@@ -7,7 +7,7 @@ class MyHeader extends HTMLElement {
         <nav class="n">
             
             <ul>
-                <li><a href = "test.html">HOME</a></li>
+                <li><a href = "index.html">HOME</a></li>
                 <li><a href = "gal.html">GALLERY</a></li>
                 <li><a href = "interest.html">ENQUIRE</a></li>
                 <li><a href = "arr.html">3D VISUALISER</a></li>
@@ -24,7 +24,7 @@ class MyFooter extends HTMLElement {
     this.innerHTML = `
       
             
-        <footer>©The Appartments</footer>
+        <footer>©The Apartments</footer>
       `;
   }
 }
