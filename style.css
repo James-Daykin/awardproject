@@ -922,6 +922,7 @@ footer {
 footer div {
   height: 100px;
   background-color: black;
+  overflow: auto;
 }
 @media (max-width: 880px) {
   nav {
