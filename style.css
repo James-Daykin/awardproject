@@ -43,7 +43,7 @@ body {
 }
 .wrapper {
   height: 100vh;
-  overflow-y: visible;
+  overflow-y: hidden;
   overflow-x: hidden;
   perspective: 10px;
 }
@@ -945,4 +945,5 @@ footer div {
     max-width: 60%;
   }
 }
+
 
